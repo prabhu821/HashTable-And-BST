@@ -10,7 +10,8 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect the operation to perform \n1.Create Hash Table \n2.Hash Table for Paragragh \n3.Exit");
+                Console.WriteLine("\nSelect the operation to perform \n1.Create Hash Table \n2.Hash Table for Paragragh " +
+                    "\n3.Remove Hash value \n4.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -92,6 +93,10 @@
                         Console.WriteLine("16th index value: " + para16);
                         Console.WriteLine("17th index value: " + para17);
                         Console.WriteLine("18th index value: " + para18);
+                        break;
+                    case 3:
+                        para.Remove("17", "avoidable");
+                        Console.WriteLine("Value Deleted");
                         break;
                     default:
                         flag = false;
