@@ -7,11 +7,12 @@
             Console.WriteLine("Hash Table And BST !");
             MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
             MyMapNode<string, string> para = new MyMapNode<string, string>(16);
+            BinarySearchTree binarySearchTree = new BinarySearchTree();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Hash Table \n2.Hash Table for Paragragh " +
-                    "\n3.Remove Hash value \n4.Exit");
+                    "\n3.Remove Hash value \n4.Create BST \n5.Display Tree \n6.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -97,6 +98,18 @@
                     case 3:
                         para.Remove("17", "avoidable");
                         Console.WriteLine("Value Deleted");
+                        break;
+                    case 4:
+                        binarySearchTree.Insert(56);
+                        binarySearchTree.Insert(30);
+                        binarySearchTree.Insert(70);
+                        binarySearchTree.Insert(45);
+                        binarySearchTree.Insert(34);
+                        binarySearchTree.Insert(87);
+                        Console.WriteLine("Tree Created");
+                        break;
+                    case 5:
+                        binarySearchTree.Display(binarySearchTree.ReturnRoot());
                         break;
                     default:
                         flag = false;
