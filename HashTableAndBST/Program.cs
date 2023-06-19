@@ -12,7 +12,7 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Hash Table \n2.Hash Table for Paragragh " +
-                    "\n3.Remove Hash value \n4.Create BST \n5.Display Tree \n6.Size of BST \n7.Exit");
+                    "\n3.Remove Hash value \n4.Create BST \n5.Display Tree \n6.Size of BST \n7.Search in BST \n8.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -106,6 +106,12 @@
                         binarySearchTree.Insert(45);
                         binarySearchTree.Insert(34);
                         binarySearchTree.Insert(87);
+                        binarySearchTree.Insert(22);
+                        binarySearchTree.Insert(11);
+                        binarySearchTree.Insert(95);
+                        binarySearchTree.Insert(63);
+                        binarySearchTree.Insert(3);
+                        binarySearchTree.Insert(65);
                         Console.WriteLine("Tree Created");
                         break;
                     case 5:
@@ -113,6 +119,11 @@
                         break;
                     case 6:
                         Console.WriteLine("The size of binary tree is : " + binarySearchTree.size());
+                        break;
+                    case 7:
+                        Console.WriteLine("Enter the value u want to find");
+                        int value = Convert.ToInt32(Console.ReadLine());
+                        binarySearchTree.Search(value);
                         break;
                     default:
                         flag = false;

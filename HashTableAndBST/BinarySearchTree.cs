@@ -77,5 +77,37 @@ namespace HashTableAndBST
                 return (size(node.leftCount) + 1 + size(node.rightCount));
             }
         }
+
+        public Node Search(int value)
+        {
+            Node result = Search(root, value);
+            if (result != null)
+            {
+                Console.WriteLine("Found: " + result.item);
+            }
+            else
+            {
+                Console.WriteLine("Not found.");
+            }
+            return result;
+        }
+
+        private Node Search(Node node, int value)
+        {
+            if (node == null || node.item == value)
+            {
+                return node;
+            }
+
+            if (value < node.item)
+            {
+                return Search(node.leftCount, value);
+            }
+            else
+            {
+                return Search(node.rightCount, value);
+            }
+        }
+
     }
 }
